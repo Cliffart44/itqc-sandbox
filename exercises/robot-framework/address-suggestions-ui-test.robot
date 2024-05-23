@@ -1,8 +1,12 @@
 *** Settings ***
-Library    SeleniumLibrary
+Documentation    UI autotest example for ITQC sandbox
+Library          SeleniumLibrary
+
 
 *** Test Cases ***
 Check Visibility And Relevance Of Address Suggestions
+    [Documentation]    Basic checks for Dadata service.
+
     Open Browser                     https://sandy.pandemonium.itqc.ru
     Title Should Be                  Pandemonium Demo VTB
     Input Text                       prodname    Тест
