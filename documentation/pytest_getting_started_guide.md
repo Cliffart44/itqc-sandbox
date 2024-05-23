@@ -30,3 +30,7 @@
    Результаты локального запуска выводятся в терминале, в котором были запущены автотесты.
 7. Также для более детального ознакомления с pytest доступны
    [примеры и тонкости настройки](https://docs.pytest.org/en/stable/example/index.html).
+
+__P.S.__ Функциональность pytest для тестирования UI можно расширить с помощью
+[Pylenium](https://docs.pylenium.io/getting-started/setup-pytest). В таком случае автотест принимает
+[более лаконичный вид](../exercises/pytest/address_suggestions_pylenium_ui_test.py).
