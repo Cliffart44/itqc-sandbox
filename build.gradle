@@ -1,0 +1,31 @@
+plugins {
+    id "java"
+    id "idea"
+}
+
+group = "org.example"
+version = "1.0-SNAPSHOT"
+
+java {
+    sourceCompatibility = 21
+    compileJava.options.encoding = "UTF-8"
+    compileTestJava.options.encoding = "UTF-8"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation "commons-codec:commons-codec:1.17.0"
+    testImplementation "io.rest-assured:rest-assured:5.4.0"
+    testImplementation "org.junit.jupiter:junit-jupiter:5.10.0"
+    testImplementation "com.codeborne:selenide:7.3.2"
+    testImplementation "org.slf4j:slf4j-nop:2.0.13"
+    testRuntimeOnly "org.junit.platform:junit-platform-launcher"
+}
+
+test {
+    useJUnitPlatform()
+    systemProperties = System.properties as Map<String, ?>
+}
