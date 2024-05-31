@@ -23,6 +23,7 @@ dependencies {
     testImplementation "io.rest-assured:rest-assured:5.4.0"
     testImplementation "com.codeborne:selenide:7.3.2"
     testImplementation "org.slf4j:slf4j-nop:2.0.13"
+    testImplementation "com.microsoft.playwright:playwright:1.44.0"
     testRuntimeOnly "org.junit.platform:junit-platform-launcher"
 }
 
