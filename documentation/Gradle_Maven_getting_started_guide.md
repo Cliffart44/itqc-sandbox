@@ -1,4 +1,4 @@
-# Руководство по началу работы с Gradle
+# Руководство по началу работы с Gradle и Maven
 
 1. Начать стоит с установки [IntelliJ IDEA](https://www.jetbrains.com/help/idea/installation-guide.html) —
    интегрированной среды разработки (IDE).
@@ -23,5 +23,11 @@
           ([GitHub](https://github.com/selenide/selenide/releases));
     - указать кодировку компиляции тестовых классов — `java {compileTestJava.options.encoding = "UTF-8"}`).
 5. Процесс запуска автотестов отражён
-   в [документации](https://www.jetbrains.com/help/idea/getting-started-with-gradle.html#test_gradle) (также
-   доступен [запуск из терминала](https://docs.gradle.org/current/userguide/command_line_interface.html)).
+   в [документации](https://www.jetbrains.com/help/idea/getting-started-with-gradle.html#test_gradle) (и доступен
+   [запуск из терминала](https://docs.gradle.org/current/userguide/command_line_interface.html)).
+6. Также возможно добавить
+   [поддержку Maven](https://www.jetbrains.com/help/idea/convert-a-regular-project-into-a-maven-project.html#add_maven_support)
+   к проекту, и процесс запуска автотестов с его помощью отражён в
+   [соответствующей документации](https://maven.apache.org/guides/getting-started/index.html#how-do-i-compile-my-test-sources-and-run-my-unit-tests).
+   Пример файла [pom.xml](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html) имеется в
+   [репозитории](../pom.xml).
