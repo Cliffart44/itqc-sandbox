@@ -1,0 +1,110 @@
+{
+  "id": "0b44d4e7-6ea6-4093-97b1-83ac964df4e0",
+  "version": "2.0",
+  "name": "ITQC Sandbox",
+  "url": "https://sandy.pandemonium.itqc.ru/",
+  "tests": [{
+    "id": "3e650662-75c6-48e5-afde-070ccac17537",
+    "name": "Check Visibility And Relevance Of Address Suggestions",
+    "commands": [{
+      "id": "4486a466-75ab-46a4-a3c6-b3a7b91904cc",
+      "comment": "",
+      "command": "open",
+      "target": "https://sandy.pandemonium.itqc.ru/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "66a2399b-f0e9-40b7-a1e1-38cc15dddaf5",
+      "comment": "",
+      "command": "click",
+      "target": "name=prodname",
+      "targets": [
+        ["name=prodname", "name"],
+        ["css=.product-name", "css:finder"],
+        ["xpath=//input[@name='prodname']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "12327ab6-d99c-4f85-896f-447e36ecdd16",
+      "comment": "",
+      "command": "type",
+      "target": "name=prodname",
+      "targets": [
+        ["name=prodname", "name"],
+        ["css=.product-name", "css:finder"],
+        ["xpath=//input[@name='prodname']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " Test"
+    }, {
+      "id": "dc83edff-ffed-4952-8f89-76d1b4b8a20f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-request",
+      "targets": [
+        ["css=.btn-request", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Оформить заказ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2034c332-23b7-4f9d-a997-44cfc3083406",
+      "comment": "",
+      "command": "click",
+      "target": "id=address-query",
+      "targets": [
+        ["id=address-query", "id"],
+        ["name=address-query", "name"],
+        ["css=#address-query", "css:finder"],
+        ["xpath=//input[@id='address-query']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "38674a1d-ab1f-4161-88ca-767fa7e6b09c",
+      "comment": "",
+      "command": "type",
+      "target": "id=address-query",
+      "targets": [
+        ["id=address-query", "id"],
+        ["name=address-query", "name"],
+        ["css=#address-query", "css:finder"],
+        ["xpath=//input[@id='address-query']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "влади"
+    }, {
+      "id": "e4ce1e1f-f092-44bb-bced-b734a2e152ab",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.suggestion-item",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "3bbcf8ad-3499-40dc-a1bf-033e5e05527a",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//li[contains(.,'г Владимир')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1399da24-ac12-431a-89e0-b56cf261ada0",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//li[contains(.,'Владикавказ')]",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f34fac21-187f-47ba-8a5f-ca379cbf8f76",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://sandy.pandemonium.itqc.ru/"],
+  "plugins": []
+}
