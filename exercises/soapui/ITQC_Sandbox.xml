@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="a0f82c91-a070-487b-a0d5-5029e2954319" activeEnvironment="Default" name="ITQC Sandbox" resourceRoot="" soapui-version="5.7.2" abortOnError="false" runType="SEQUENTIAL"
+    xmlns:con="http://eviware.com/soapui/config">
+    <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local">
+            <![CDATA[<xml-fragment
+            xmlns:con="http://eviware.com/soapui/config"><con:entry key="Report Format(s)" value=""/><con:entry key="Host:Port" value=""/><con:entry key="Export JUnit Results" value="false"/><con:entry key="Export All" value="false"/><con:entry key="Save After" value="false"/><con:entry key="Add Settings" value="false"/><con:entry key="WSS Password Type" value=""/><con:entry key="TestSuite" value="MS1"/><con:entry key="Endpoint" value=""/><con:entry key="Select Report Type" value=""/><con:entry key="System Properties" value=""/><con:entry key="Password" value=""/><con:entry key="Print Report" value="true"/><con:entry key="Open Report" value="false"/><con:entry key="Export JUnit Results with test properties" value="false"/><con:entry key="Global Properties" value=""/><con:entry key="Project Properties" value=""/><con:entry key="Project Password" value=""/><con:entry key="TestCase" value="&lt;all>"/><con:entry key="Username" value=""/><con:entry key="user-settings.xml Password" value=""/><con:entry key="TestRunner Path" value=""/><con:entry key="Environment" value="Default"/><con:entry key="Coverage Report" value="false"/><con:entry key="Enable UI" value="false"/><con:entry key="Root Folder" value=""/><con:entry key="Ignore Errors" value="false"/><con:entry key="Domain" value=""/><con:entry key="Tool Args" value=""/><con:entry key="Save Project" value="true"/></xml-fragment>]]>
+        </con:setting>
+    </con:settings>
+    <con:interface xsi:type="con:RestService" id="59620c65-b959-4919-85a7-9f357a8f3765" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://sandy.pandemonium.itqc.ru" type="rest"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:settings/>
+        <con:definitionCache type="TEXT" rootPart=""/>
+        <con:endpoints>
+            <con:endpoint>https://sandy.pandemonium.itqc.ru</con:endpoint>
+        </con:endpoints>
+        <con:resource name="" path="/ms1/suggest-address" id="29b1d93f-a547-4c99-be0d-a9fb8e5dfa9d">
+            <con:settings/>
+            <con:parameters>
+                <con:parameter>
+                    <con:name>address</con:name>
+                    <con:value/>
+                    <con:style>QUERY</con:style>
+                    <con:default/>
+                    <con:description xsi:nil="true"/>
+                </con:parameter>
+            </con:parameters>
+            <con:method name="1" id="57297443-2351-43f7-99bb-007674e20cad" method="GET">
+                <con:settings/>
+                <con:parameters/>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>application/json; charset=utf-8</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element
+                        xmlns:sug="https://sandy.pandemonium.itqc.ru/ms1/suggest-address">sug:Response
+                    </con:element>
+                </con:representation>
+                <con:request name="Get Address Suggestions" id="0e2a571b-6000-4619-8bda-a71e20d69d7f" mediaType="application/json">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                </con:settings>
+                <con:endpoint>https://sandy.pandemonium.itqc.ru</con:endpoint>
+                <con:request/>
+                <con:originalUri>https://sandy.pandemonium.itqc.ru/ms1/suggest-address</con:originalUri>
+                <con:credentials>
+                    <con:authType>No Authorization</con:authType>
+                </con:credentials>
+                <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                <con:jmsPropertyConfig/>
+                <con:parameters>
+                    <entry key="address" value="влади"
+                        xmlns="http://eviware.com/soapui/config"/>
+                    </con:parameters>
+                    <con:parameterOrder>
+                        <con:entry>address</con:entry>
+                    </con:parameterOrder>
+                </con:request>
+            </con:method>
+        </con:resource>
+    </con:interface>
+    <con:testSuite id="7ec1f94f-b14d-4a5c-b445-02a8562c9af0" name="MS1">
+        <con:description>TestSuite generated for REST Service [https://sandy.pandemonium.itqc.ru]</con:description>
+        <con:settings/>
+        <con:runType>SEQUENTIAL</con:runType>
+        <con:testCase id="4bb5c55b-7095-40b3-8915-725e11e7ad10" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Check Relevance Of Address Suggestions" searchProperties="true">
+            <con:description>TestCase generated for REST Resource [] located at [/ms1/suggest-address]</con:description>
+            <con:settings/>
+            <con:testStep type="restrequest" name="Get Address Suggestions" id="925042fc-434d-4971-a35b-54add9e16bf4">
+                <con:settings/>
+                <con:config service="https://sandy.pandemonium.itqc.ru" resourcePath="/ms1/suggest-address" methodName="1" xsi:type="con:RestRequestStep"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Get Address Suggestions" id="0e2a571b-6000-4619-8bda-a71e20d69d7f" mediaType="application/json">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                    </con:settings>
+                    <con:endpoint>https://sandy.pandemonium.itqc.ru</con:endpoint>
+                    <con:request/>
+                    <con:originalUri>https://sandy.pandemonium.itqc.ru/ms1/suggest-address</con:originalUri>
+                    <con:assertion type="JsonPath Count" id="ba8ef617-0fcc-47ca-9eaa-14c5992086ad" name="Vladimir">
+                        <con:configuration>
+                            <path>$.suggestions[?(@ == "г Владимир")]</path>
+                            <content>1</content>
+                            <allowWildcards>false</allowWildcards>
+                            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                            <ignoreComments>false</ignoreComments>
+                        </con:configuration>
+                    </con:assertion>
+                    <con:assertion type="JsonPath Count" id="16c464ea-8bb3-4c6d-905a-938eb60fdd76" name="Vladikavkaz">
+                        <con:configuration>
+                            <path>$.suggestions[?(@ == "г Владикавказ")]</path>
+                            <content>1</content>
+                            <allowWildcards>false</allowWildcards>
+                            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                            <ignoreComments>false</ignoreComments>
+                        </con:configuration>
+                    </con:assertion>
+                    <con:credentials>
+                        <con:authType>No Authorization</con:authType>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters>
+                        <entry key="address" value="влади"
+                            xmlns="http://eviware.com/soapui/config"/>
+                        </con:parameters>
+                        <con:parameterOrder>
+                            <con:entry>address</con:entry>
+                        </con:parameterOrder>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:properties/>
+    </con:testSuite>
+    <con:properties/>
+    <con:wssContainer/>
+    <con:oAuth2ProfileContainer/>
+    <con:oAuth1ProfileContainer/>
+</con:soapui-project>
