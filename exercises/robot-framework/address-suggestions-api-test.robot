@@ -10,8 +10,8 @@ Suite Teardown      Delete All Sessions
 
 
 *** Variables ***
-${BASE_URL}                 https://sandy.pandemonium.itqc.ru/
-${SUGGESTION_URL}           ms1/suggest-address
+${BASE_URL}                 https://sandy.pandemonium.itqc.ru
+${SUGGESTION_URL}           /ms1/suggest-address
 ${SUGGESTION_INPUT}         Влади
 ${SUGGESTIONS_JSON_PATH}    $..suggestions
 
